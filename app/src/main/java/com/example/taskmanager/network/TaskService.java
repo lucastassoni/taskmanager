@@ -1,5 +1,7 @@
 package com.example.taskmanager.network;
 
+import com.example.taskmanager.models.Task;
+
 import java.util.List;
 
 import retrofit2.Call;

@@ -4,7 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.taskmanager.models.Task;
+
 import java.util.ArrayList;
+import java.util.List;
+
+
+
 public class TaskListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

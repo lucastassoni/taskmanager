@@ -7,6 +7,16 @@ public class Task implements Serializable {
     private String title;
     private String priority;
     private boolean completed;
+    private String status; // Campo adicional para status
+    private boolean notify; // Campo adicional para notificação
+
+    // Construtor com todos os parâmetros
+    public Task(String title, String priority, String status, boolean notify) {
+        this.title = title;
+        this.priority = priority;
+        this.status = status;
+        this.notify = notify;
+    }
 
     // Getters e Setters
     public int getId() {
@@ -41,8 +51,29 @@ public class Task implements Serializable {
         this.completed = completed;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public boolean isNotify() {
+        return notify;
+    }
+
+    public void setNotify(boolean notify) {
+        this.notify = notify;
+    }
+
     @Override
     public String toString() {
-        return title + " (" + priority + ")";
+        return "ID: " + id + "\n" +
+                "Título: " + title + "\n" +
+                "Prioridade: " + priority + "\n" +
+                "Status: " + status + "\n" +
+                "Notificar: " + (notify ? "Sim" : "Não") + "\n" +
+                "Concluído: " + (completed ? "Sim" : "Não");
     }
 }

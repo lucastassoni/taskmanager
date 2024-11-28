@@ -13,9 +13,16 @@ public class TaskDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_details);
 
+        // Recebe o objeto Task enviado como extra
         Task task = (Task) getIntent().getSerializableExtra("task");
+
         TextView tvDetails = findViewById(R.id.tvDetails);
 
-        tvDetails.setText(task.toString());
+        if (task != null) {
+            // Exibe os detalhes usando o método toString() da classe Task
+            tvDetails.setText(task.toString());
+        } else {
+            tvDetails.setText("Tarefa não encontrada.");
+        }
     }
 }
